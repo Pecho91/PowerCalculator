@@ -40,7 +40,6 @@ public class CustomDocumentFilter extends DocumentFilter {
 	}
 	
 	// JTextField font change
-	
 	public void changeFont(final Component component, final Font font) {
 		if(component instanceof JLabel || component instanceof JTextField || component instanceof JButton) {
 				component.setFont(font);
@@ -70,9 +69,6 @@ public class CustomDocumentFilter extends DocumentFilter {
 			for(Component child : ((Container) component).getComponents()) {
 				alignTextFieldsRight(child);
 			}
-		}
-		
-	}  
-			
-	
+		}		
+	}  	
 }

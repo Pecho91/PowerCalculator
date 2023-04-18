@@ -14,26 +14,17 @@ import javax.swing.JTextField;
 import javax.swing.text.AbstractDocument;
 
 import engine.Calculations;
-//import javax.swing.text.DocumentFilter;
-
-
-
 
 public class DCPanel extends JPanel implements ActionListener{
 
-	/**
-	 * 
-	 */
 	CustomDocumentFilter customDocumentFilter;
 	private static final long serialVersionUID = 1L;
-	
-	
+		
 	private JPanel topPanel;
-//	private JPanel centerPanel;
-//	private JPanel bottomPanel;
-	
-	
-	//private JLabel label;
+	// private JPanel centerPanel;
+	// private JPanel bottomPanel;
+		
+	// private JLabel label;
 	
 	private JLabel resistanceLabel;
 	private JLabel currentLabel;
@@ -53,8 +44,6 @@ public class DCPanel extends JPanel implements ActionListener{
 	private JButton calculateButton;
 	private JButton clearButton;
 	
-
-	
 	//private JComboBox<String> resistanceComboBox;
 	//private JComboBox<String> currentComboBox;
 	//private JComboBox<String> voltageComboBox;
@@ -66,10 +55,8 @@ public class DCPanel extends JPanel implements ActionListener{
 	//private Font textFieldFont;
 	
 	private Font font = new Font("BOLD",Font.ITALIC,20);
-
 	
-		
-//	private static final Dimension PANEL_SIZE = new Dimension (600, 280);
+	//private static final Dimension PANEL_SIZE = new Dimension (600, 280);
 	//private static final Dimension FONTSIZE = new Dimension(20,20);
 	
 	
@@ -84,7 +71,6 @@ public class DCPanel extends JPanel implements ActionListener{
 	
 	private void addGuiComponents() {
 		addPanels();
-
 	}
 	
 	private void addPanels() {
@@ -180,8 +166,6 @@ public class DCPanel extends JPanel implements ActionListener{
         customDocumentFilter.changeFont(topPanel, font);
         customDocumentFilter.alignTextFieldsRight(topPanel);
         
-        
-
         return topPanel;
 	}
 	
@@ -190,7 +174,7 @@ public class DCPanel extends JPanel implements ActionListener{
 		Object source = e.getSource();
 				
 		//handle button clicks.
-		if (source == calculateButton) { // TODO calculate double/ string = find solution
+		if (source == calculateButton) { 
 			try {
 				String resistanceStr = resistanceTextField.getText();
 		        String currentStr = currentTextField.getText();
@@ -211,7 +195,7 @@ public class DCPanel extends JPanel implements ActionListener{
 			}
 		}
 		else if (source == clearButton) {
-		    // clear all text fields
+			
 		    resistanceTextField.setText("");
 		    currentTextField.setText("");
 		    voltageTextField.setText("");

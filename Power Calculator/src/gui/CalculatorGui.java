@@ -8,21 +8,9 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.SpringLayout;
-
-
-
-
 
 public class CalculatorGui extends JFrame implements ActionListener {
 	
-	
-	//private final SpringLayout springLayout = new SpringLayout();
-   // private CalculatorService calculatorService;
-	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private final JFrame frame;
 	private final DCPanel dcPanel;
@@ -37,16 +25,13 @@ public class CalculatorGui extends JFrame implements ActionListener {
 		this.setLocationRelativeTo(null);
 		final JMenuBar menuBar = createMenuBar();
 		this.frame.setJMenuBar(menuBar);
-		//this.frame.setLayout(null);
 		this.dcPanel = new DCPanel();
 	
 		this.frame.setVisible(true);
 		this.frame.setResizable(false);
 		
-		//this.pack();
-		this.frame.add(dcPanel);
-		
-		
+		this.pack();
+		this.frame.add(dcPanel);	
 	}
 
 	private JMenuBar createMenuBar() {
@@ -65,8 +50,7 @@ public class CalculatorGui extends JFrame implements ActionListener {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				//clear (add new label)
-			}
-			
+			}		
 		});
 		
 		final JMenuItem exitMenuItem = new JMenuItem("Exit");
@@ -75,9 +59,9 @@ public class CalculatorGui extends JFrame implements ActionListener {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
-			}
-			
+			}		
 		});
+		
 		fileMenu.add(exitMenuItem);
 		return fileMenu;
 	}
@@ -92,15 +76,12 @@ public class CalculatorGui extends JFrame implements ActionListener {
 		preferencesMenu.add(dcPowerCalc);
 		preferencesMenu.add(acPowerCalc);
 		preferencesMenu.add(energyPowerCalc);
-		return preferencesMenu;
-		
+		return preferencesMenu;		
 	}
 	
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
-
 }
